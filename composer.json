@@ -1,0 +1,44 @@
+{
+    "name": "sngularai/neo4j-bundle",
+    "description": "Symfony integration for Neo4j",
+    "type": "symfony-bundle",
+    "keywords": ["neo4j"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Tobias Nyholm",
+            "email": "tobias.nyholm@gmail.com"
+        },
+        {
+            "name": "Xavier Coureau",
+            "email": "xavier@pandawan-technology.com"
+        }
+    ],
+    "require": {
+        "php": "^7.0",
+        "sngularai/neo4j-php-client": "^5.0",
+        "symfony/dependency-injection": " ^2.8.3 || ^3.0.3 || ^4.0 || ^5.0",
+        "symfony/framework-bundle": "^2.8.32 || ^3.0 || ^4.0 || ^5.0",
+        "symfony/http-kernel": "^2.8 || ^3.0 || ^4.0 || ^5.0",
+        "twig/twig": "^1.18 || ^2.0"
+    },
+    "require-dev": {
+        "symfony/phpunit-bridge": "^3.3 || ^4.0 || ^5.0",
+        "matthiasnoback/symfony-dependency-injection-test": "^2.3"
+    },
+    "suggest": {
+        "graphaware/neo4j-php-ogm": "To have EntityManager support"
+    },
+    "autoload": {
+        "psr-4": {
+            "Neo4j\\Neo4jBundle\\": ""
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "scripts": {
+        "test": "vendor/bin/simple-phpunit",
+        "test-ci": "vendor/bin/simple-phpunit --coverage-text --coverage-clover=build/coverage.xml"
+    }
+}
