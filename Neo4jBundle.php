@@ -12,6 +12,9 @@ class Neo4jBundle extends Bundle
 {
     private $autoloader;
 
+    /**
+     * @return null|mixed
+     */
     public function getContainerExtension()
     {
         return new Neo4jExtension();
